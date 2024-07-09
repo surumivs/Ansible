@@ -14,7 +14,7 @@ Ansible server: -
 •	sudo apt install ansible
 •	ssh-keygen (On both Ansible and target servers)
 Copy the ‘id_rsa.pub’ from the ansible server and paste it on the ‘authorized_keys’ file on the target servers.
-Now password less authentication is done, checking by
+Now password-less authentication is done, checking by
 •	ssh <privateIPOf-Targetserver>
 
 2.	Checking Ansible configuration working by Ansible ad-hoc commands
@@ -42,16 +42,19 @@ This will create ‘devopsclass’ file in the target file
     service:
      name: nginx
      state: started
+    
 ![image](https://github.com/surumivs/Ansible/assets/170710844/6b559d88-cebc-4c64-8d86-9efe46074424)
 
 
 4.	Run playbook
 •	ansible-playbook -i inventory first-playbook.yml
+
 ![image](https://github.com/surumivs/Ansible/assets/170710844/ce9f37fd-598a-4906-bae1-13327e91287a)
 
 It will gather, install, and start the nginx:
 
 6.	Check on the target server that nginx is started
+   
  ![image](https://github.com/surumivs/Ansible/assets/170710844/a2dc2102-baba-4a28-aba9-d3c027c039c2)
 
 
